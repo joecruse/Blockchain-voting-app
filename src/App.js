@@ -112,8 +112,13 @@ function App() {
       signer
     );
     const time = await contractInstance.getRemainingTime();
-    setremainingTime(parseInt(time, 16));
+    const remainingSeconds = time.toNumber();
+    const remainingMinutes = Math.floor(remainingSeconds / 60);
+    const remainingSeconds_mod = remainingSeconds % 60;
+    setremainingTime(`${remainingMinutes}:${remainingSeconds_mod.toString().padStart(2, '0')}`);
   }
+  
+  
 
   function determineWinners(candidates = []) {
     let maxVotes = 0;
