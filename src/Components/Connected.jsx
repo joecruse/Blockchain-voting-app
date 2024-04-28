@@ -9,7 +9,7 @@ const Connected = (props) => {
         Contract Remaining Time: {props.remainingTime}
       </div>
       {props.showButton ? (
-        <p className="connected-account">You have already voted</p>
+        <p className="connected-account">You have already</p>
       ) : (
         <div>
           <input
