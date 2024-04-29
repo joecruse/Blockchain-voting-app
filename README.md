@@ -1,4 +1,5 @@
 Prerequisites
+
 Install Node JS
 Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting.
 1.  Download Windows Installer. First, you need to download the Windows Installer (. msi) file from the official Node.
@@ -7,6 +8,8 @@ Node.js is a cross-platform, open-source JavaScript runtime environment that can
 4.  Verify Node. js Installation.
 5.  Clone the repository.
 6.  Run npm install.
+
+
  
 Install MetaMask Extension 
 MetaMask is a software cryptocurrency wallet used to interact with the Ethereum blockchain. It allows users to access their Ethereum wallet through a browser extension or mobile app, which can then be used to interact with decentralized applications. 
@@ -48,7 +51,7 @@ Step 6. NPX Cmds. You first need to compile the contract and upload it to the bl
 
 1.	npx hardhat compile
 2.	npx hardhat run --network volta scripts/deploy.js
-This deploy script has the list of candidates and the time duration required for the voting period to be active. Here 10 represents that contract will be active for 10 mins.
+This deploy script has the list of candidates and the time duration required for the voting period to be active. Here, 10 represents that the contract will be active for 10 mins.
 
 
 3.    Copy contract address and replace it in the constant.js 
