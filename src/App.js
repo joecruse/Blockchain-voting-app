@@ -39,6 +39,10 @@ function App() {
   }, [remainingTime]);
 
   async function vote() {
+    // Create a new Ethereum provider
+    // Request access to the user's Ethereum accounts
+    // Get the signer (the user's Ethereum account) from the provider
+    // Create a new contract instance using the contract address, ABI, and the signer
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     await provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
@@ -51,10 +55,14 @@ function App() {
     const tx = await contractInstance.vote(number);
     await tx.wait();
     canVote();
-    getCandidates(); 
+    getCandidates(); // Refresh the candidates after a successful vote
   }
 
   async function canVote() {
+    // Create a new Ethereum provider
+    // Request access to the user's Ethereum accounts
+    // Get the signer (the user's Ethereum account) from the provider
+    // Create a new contract instance using the contract address, ABI, and the signer
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     await provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
@@ -68,6 +76,10 @@ function App() {
   }
 
   async function getCandidates() {
+    // Create a new Ethereum provider
+    // Request access to the user's Ethereum accounts
+    // Get the signer (the user's Ethereum account) from the provider
+    // Create a new contract instance using the contract address, ABI, and the signer
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     await provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
@@ -89,6 +101,10 @@ function App() {
   }
 
   async function getCurrentStatus() {
+    // Create a new Ethereum provider
+    // Request access to the user's Ethereum accounts
+    // Get the signer (the user's Ethereum account) from the provider
+    // Create a new contract instance using the contract address, ABI, and the signer
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     await provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
@@ -103,6 +119,10 @@ function App() {
   }
 
   async function getRemainingTime() {
+    // Create a new Ethereum provider
+    // Request access to the user's Ethereum accounts
+    // Get the signer (the user's Ethereum account) from the provider
+    // Create a new contract instance using the contract address, ABI, and the signer
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     await provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
@@ -120,6 +140,8 @@ function App() {
   
   
 
+  // Initialize variables to keep track of the maximum number of votes
+  // and the number of candidates with the maximum number of votes
   function determineWinners(candidates = []) {
     let maxVotes = 0;
     let winnerCount = 0;
@@ -140,9 +162,13 @@ function App() {
     setWinners(winners);
   }
 
+  // Check if there are any Ethereum accounts available
+  // If there are accounts and the current account is different from the first account in the list,
+  // update the application state with the new account address
   function handleAccountsChanged(accounts) {
     if (accounts.length > 0 && account !== accounts[0]) {
       setAccount(accounts[0]);
+      // Call the `canVote`
       canVote();
     } else {
       setIsConnected(false);
@@ -150,7 +176,17 @@ function App() {
     }
   }
 
+  // Check if the window.ethereum object is available
+  // Create a new Ethereum provider
+  // Set the provider in the application state
+  // Request access to the user's Ethereum accounts
+  // Get the signer (the user's Ethereum account) from the provider
+  // Get the user's Ethereum address
+  // Set the user's Ethereum address in the application state
+  // Log the connected Ethereum address to the console
+  // Set the connection status in the application state
   async function connectToMetamask() {
+    
     if (window.ethereum) {
       try {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -169,7 +205,8 @@ function App() {
       console.error("Metamask is not detected in the browser");
     }
   }
-
+  // Get the value of the input field that triggered the event
+  // Update the 'number' state with the new value
   async function handleNumberChange(e) {
     setNumber(e.target.value);
   }
