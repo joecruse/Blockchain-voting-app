@@ -1,7 +1,7 @@
 async function main() {
   const Voting = await ethers.getContractFactory("Voting");
 
-  // Start deployment, returning a promise that resolves to a contract object
+  // These are the params required for deploying the contract, The first param is Candidate name and the second one is the duration of the contract.
   const Voting_ = await Voting.deploy(["Joe", "Harshit", "Uday", "Dallas", "Khushi"], 10);
   console.log("Contract address:", Voting_.address);
 

@@ -1,25 +1,3 @@
-Voting Application
-
-This is a demo application to implement voting in solidity smart contract using ReactJS. 
-
-## Installation
-
-After you cloned the repository, you want to install the packages using
-
-```shell
-npm install
-```
-
-You first need to compile the contract and upload it to the blockchain network. Run the following commands to compile and upload the contract.
-
-```shell
-npx hardhat compile
-npx hardhat run --network volta scripts/deploy.js
-```
-
-Once the contract is uploaded to the blockchain, copy the contract address and copy it in the .env file. You can also use another blockchain by writing the blockchain's endpoint in hardhat-config.
-
-Once you have pasted your private key and contract address in the .env file, simply run command
 
 ```shell
 npm start
@@ -109,3 +87,10 @@ Step 9. Re-voting. To vote again, create a new account and generate a new token.
 5.	Click the “Create” button.
 6.	Run npx hardhat run --network volta scripts/deploy.js
 7.	Redo step 5 and 8.
+
+Step 10. Voting Results
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.	Click the MetaMask extension. 
+2.	Refresh the web browser to see results. 
+3.	If now one has voted, then you will have no winner displayed.
+
