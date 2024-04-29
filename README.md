@@ -98,6 +98,7 @@ Step 8. Voting. Ethereum accounts to cast their votes, which will help in guaran
 3.	Click the “Vote” button.
 4.	Click the MetaMask extension. 
 5.	Click the “Confirm” button. (give it some time to process).
+6.	Refresh browser to see results.
  
 Step 9. Re-voting. To vote again, create a new account and generate a new token. 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -107,4 +108,4 @@ Step 9. Re-voting. To vote again, create a new account and generate a new token.
 4.	Create name.
 5.	Click the “Create” button.
 6.	Run npx hardhat run --network volta scripts/deploy.js
-7.	Redo step 5.
+7.	Redo step 5 and 8.
