@@ -51,7 +51,7 @@ function App() {
     const tx = await contractInstance.vote(number);
     await tx.wait();
     canVote();
-    getCandidates(); // Refresh the candidates after a successful vote
+    getCandidates(); 
   }
 
   async function canVote() {
