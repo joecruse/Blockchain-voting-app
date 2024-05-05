@@ -59,8 +59,10 @@ Step 5. VSCode Solidity support for Visual Studio code. Solidity is the language
  
 Step 6. NPX Cmds. You first need to compile the contract and upload it to the blockchain network. Run the following commands to compile and upload the contract. 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+```shell
 1.	npx hardhat compile
 2.	npx hardhat run --network volta scripts/deploy.js
+```
 3.	Copy contract address and replace it in the constant.js 
  
 Step 7. Npm Run Dev is a command commonly used in the development of Node. js applications and projects that employ npm as the package manager. It is used to execute specific scripts defined in the package. json file, particularly those scripts related to the dev. To start the dev server run the following cmd.
