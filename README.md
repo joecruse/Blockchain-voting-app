@@ -1,5 +1,6 @@
 
 **SecureVote** - A Blockchain-Powered Decentralized Voting Platform
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. Developed a decentralized voting platform leveraging Ethereum blockchain, smart contracts (Solidity), and a user-friendly React frontend integrated with MetaMask wallet and Ethers.js library for secure authentication and real-time updates.
 2. Implemented version control (GitHub), smart contract deployment (Hardhat), testing (Remix), and collaborative coding (Visual Studio Code) to deliver a robust, transparent, and immutable voting solution.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
